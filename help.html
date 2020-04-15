@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Command Palette for Firefox</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+    </head>
+    <body>
+        <header>
+            <img style="position:relative;top:0.1em;" src="./icons/48.png" />
+            Command Palette
+        </header>
+        <p>
+            An extension that allows you to control Firefox with a
+            Sublime Text/<code>helm-M-x</code> inspired user
+            interface.
+        </p>
+
+        <main>
+            <h1>How do I use it?</h1>
+            <ol>
+                <li>
+                    Activate the command pallete. You can do this three ways:
+                    <ol>
+                        <li>
+                            Focus the omnibar (e.g. with <span
+                            class=key>ctrl+l</span>) then type
+                            <code>;&nbsp</code> (that's with a space
+                            at the end). The top suggestion will be a
+                            message confirming the command palete is
+                            active
+                        </li>
+                        <li>
+                            Click the <img
+                            style="vertical-align:text-bottom"
+                            src="./icons/16.png" /> button to open a
+                            popup with the command palette inside.
+                        </li>
+                        <li>
+                            Press <span class=key>Ctrl+Space</span> to
+                            open a popup underneath the <img
+                            style="vertical-align:text-bottom"
+                            src="./icons/16.png" /> button (as if you
+                            clicked on it).
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Type in words related to the task you want to
+                    complete. For example, to find all commands that
+                    affect tabs, type in <code>tab&nbsp</code> and see
+                    what suggestions it gives.
+
+                    <p>
+                        <em>Note:</em> the omnibar can only show 6 suggestions
+                        at a time, so this isn't an exhaustive
+                        list. The page you are currently reading lists
+                        all available commands.
+                    </p>
+                </li>
+                <li>
+                    Once you can see the command you want, use
+                    <span class=key>tab</span> key to select it.
+                </li>
+                <li>
+                    <span class=tag>optional</span>
+                    If you're chosen command takes an argument,
+                    suggestions will now be listed. Use the familar search
+                    then <span class=key>tab</span> interface to select the argument
+                    you want. Free-form arguments are not allowed.
+                </li>
+                <li>
+                    Invoke the command with <span class=key>return</span>.
+                </li>
+            </ol>
+
+            In the popup interface, the mouse can also be
+            used. Clicking once on an item will fill your input,
+            whilst double-clicking will activate the command.
+
+            <h2>Commands</h2>
+            <dl>
+                <dt>help</dt>
+                <dd>Open the help page (what you're currently reading) in a new tab.</dd>
+
+                <dt>open new tab</dt>
+                <dd>Open a new tab.</dd>
+
+                <dt>open tab in container <span class=tag>container-id</span></dt>
+                <dd>Open a new tab in the specific container. Auto-complete will help you find the right ID.</dd>
+
+                <dt>open tab in temporary container</dt>
+                <dd>Open a new tab in a temporary container (requires the 'Temporary Containers' extension).</dd>
+
+                <dt>reload this tab</dt>
+                <dd>Reload this tab.</dd>
+
+                <dt>put this tab to sleep</dt>
+                <dd>Unload this tab and move focus to a random, non-sleepy tab.</dd>
+
+                <dt>put other tabs to sleep</dt>
+                <dd>Finds all other tabs in the current window (that aren't pinned), and puts them to sleep. The current tab will stay awake.</dd>
+
+                <dt>mute this tab</dt>
+                <dd>Mute audio from this tab.</dd>
+
+                <dt>unmute this tab</dt>
+                <dd>Unmute audio from this tab.</dd>
+
+                <dt>pin this tab</dt>
+                <dd>Pin this tab.</dd>
+
+                <dt>unpin this tab</dt>
+                <dd>Unpin this tab.</dd>
+
+                <dt>close this tab</dt>
+                <dd>Close this tab.</dd>
+
+                <dt>open new window</dt>
+                <dd>Open a new window.</dd>
+
+                <dt>open new private window</dt>
+                <dd>Open a new private window.</dd>
+
+                <dt>close this window</dt>
+                <dd>Close this window.</dd>
+
+                <dt>toggle reader mode in this tab</dt>
+                <dd>Toggle reader mode in this tab.</dd>
+
+                <dt>save this tab as pdf</dt>
+                <dd>Save this tab as pdf.</dd>
+
+                <dt>move this tab to container <span class=tag>container-id</span></dt>
+                <dd>Close this tab then open its URL in the chosen container. Takes the container ID as a required argument. The container name each ID maps to is given in the description.</dd>
+
+                <dt>move this tab to temporary container</dt>
+                <dd>Close this tab then open its URL in a new, temporary container (requires 'Temporary Containers' extension).</dd>
+
+                <dt>go to tab <span class=tag>tab-id</span></dt>
+                <dd>Change focus to the given tab. Takes the target tabs ID as a required argument (which autocomplete should help you find).</dd>
+
+                <dt>move this tab to popup window</dt>
+                <dd>Move the current tab to its own window with a minimal user interface. There is no way of reversing this operation that I'm aware of.</dd>
+
+                <dt>move this tab to a new window</dt>
+                <dd>Move the current tab to its own window.</dd>
+
+            </dl>
+
+            <h1>Why the semicolon?</h1>
+            <p>
+                I use <span class=key>ctrl+l</span> to focus the
+                omnibar on Firefox, and <code>;</code> is next to
+                <code>l</code> on my keyboard. So <code>;</code> is
+                the most convenient key for me to press after focusing
+                the omnibar.
+            </p>
+
+            <h1>Credits</h1>
+            <p>
+                This extension uses the Terminal icon from <a href="https://fontawesome.com">Font Awesome</a>. It's <a href="https://fontawesome.com/license/free">licensed</a> under Creative Commons <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>.
+            </p>
+        </main>
+
+        <footer>
+            <ul class=inline>
+                <li>
+                    Made by <a href="https://daniel.wilshirejones.com">djwj</a>
+                </li>
+                <li>
+                    Find the source on <a href="https://github.com/dj311/firefox-command-palette">GitHub</a>
+                </li>
+                <li>
+                    Licensed under <a href="https:/www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>

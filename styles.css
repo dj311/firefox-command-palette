@@ -1,0 +1,114 @@
+:root {
+    --highlight-color: #e6e6e6;
+    --accent-color: #bbddff;
+
+    --border: 2px solid var(--highlight-color);
+    --border-accent: 2px solid var(--accent-color);
+
+    --spacing-unit: 0.4em;
+
+    --space-sm: var(--spacing-unit);
+    --space-md: calc(2*var(--spacing-unit));
+    --space-lg: calc(3*var(--spacing-unit));
+    --space-xl: calc(4*var(--spacing-unit));
+    --space-2xl: calc(8*var(--spacing-unit));
+
+}
+
+html {
+    text-align: center;
+}
+
+body {
+    max-width: 80ch;
+    padding: var(--space-md);
+    margin: auto;
+    text-align: justify;
+}
+
+header {
+    font-size: 4em;
+    text-align: center;
+    margin: var(--space-lg) 0 var(--space-md) 0;
+    border-bottom: var(--border);
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: var(--space-lg);
+}
+
+ol {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+li {
+    margin-bottom: var(--space-md);
+}
+dt {
+    display: inline-block;
+    border-bottom: var(--border);
+    margin-bottom: var(--space-sm);
+}
+dd:before {
+    content: ":: ";
+    font-family: monospace;
+}
+dd {
+    margin-bottom: var(--space-md);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: var(--border-accent);
+}
+a:hover {
+    background-color: var(--accent-color);
+}
+a:focus, a:active {
+    font-style: italic;
+}
+
+code, .tag, .key {
+    background-color: var(--highlight-color);
+    font-family: monospace;
+}
+
+.tag:before {content: "[";}
+.tag:after {content: "]";}
+
+.key:before {content: "<";}
+.key:after {content: ">";}
+
+.emoji {
+    font-family: twemoji mozilla, apple color emoji, segoe ui emoji,
+                 segoe ui symbol, noto color emoji, symbola;
+}
+
+ul.inline {
+    display: inline;
+    list-style: none;
+    text-align: center;
+    padding: inherit;
+}
+ul.inline li {
+    display: inline;
+    margin-right: var(--space-md);
+}
+ul.inline li:before {
+    content: "•";
+    margin-right: var(--space-md);
+}
+ul.inline li:first-child:before{
+    content: "";
+    margin-right: var(--space-md);
+}
+
+footer {
+    text-align: center;
+    border-top: var(--border);
+    margin-top: var(--space-2xl);
+    padding: var(--space-md);
+}

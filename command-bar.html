@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header class="panel-section panel-section-header">
+            <input id="search-input" type="search" name="command" autofocus placeholder="Type a command then press <Return>.">
+        </header>
+
+        <div id="search-results" class="panel-section panel-section-list"></div>
+
+        <style>
+         :root {
+             overflow: hidden;
+         }
+         #search-input {
+             width: 80ch;
+             max-width: 100%;
+             border: none;
+         }
+         #search-results {
+             overflow-y: auto;
+             scrollbar-width: thin;
+             max-height: 400px;
+         }
+         .panel-list-item {
+             flex-shrink: 0;
+         }
+         .panel-list-item:hover {
+             cursor: pointer;
+         }
+         .panel-list-item.selected {
+             background-color: rgba(0, 0, 0, 0.06);
+             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+             border-top: 1px solid rgba(0, 0, 0, 0.1);
+         }
+        </style>
+
+        <script src="commands.js"></script>
+        <script src="fuzzysearch.js"></script>
+        <script src="search.js"></script>
+        <script src="command-bar.js"></script>
+    </body>
+</html>
