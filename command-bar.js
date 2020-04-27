@@ -19,7 +19,14 @@ class CommandBar {
             this.old_value = this.input_el.value;
         }
 
-        this.selected_index = Math.max(-1, Math.min(index, this.filtered_items.length - 1));
+        if (index > this.filtered_items.length - 1) {
+            this.selected_index = -1;
+        } else if (index < -1) {
+            this.selected_index = this.filtered_items.length - 1;
+        } else {
+            this.selected_index = index;
+        }
+
 
         if (this.selected_index === -1) {
             this.input_el.value = this.old_value;
