@@ -3,9 +3,9 @@ Control Firefox with Sublime/helm-M-x style fuzzy complete. Use it from the omni
 
 To build:
 
-  1. Clone this repo and make sure you have node, npm and web-ext setup.
+  1. Clone this repo and make sure you have node and npm setup and working.
   2. `npm install fuzzysearch`
-  3. `web-ext build`
+  3. `zip -r firefox-command-palette * -x firefox-command-palette.zip`
 
 ## Credits
 This extension uses the Terminal icon from [Font Awesome](https://fontawesome.com). It's [licensed](https://fontawesome.com/license/free) under Creative Commons [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
