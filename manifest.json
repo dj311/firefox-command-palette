@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Command Palette",
   "version": "1.0",
-  "description": "Command Palette - control Firefox from the omnibar.",
+  "description": "Control Firefox with Sublime/helm-M-x style fuzzy complete. Use it from the omnibar with the ; search prefix, or trigger a pop-up with Ctrl+Space. Keybinding is configurable.",
   "omnibox": {"keyword" : ";"},
   "background": {"page": "background.html"},
   "permissions": [
