@@ -1,3 +1,14 @@
+function fuzzysearchphrase(needle, haystack) {
+    let score = 0;
+    for (const word of needle.split(" ")) {
+        if (fuzzysearch(word, haystack)) {
+            score += 1;
+        }
+    }
+    return score;
+}
+
+
 async function onChange(input) {
     input = input.toLowerCase().trim();
 
