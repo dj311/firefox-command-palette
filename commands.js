@@ -25,6 +25,7 @@ commands = [
     {
         name: "open new tab",
         desc: "",
+        shortcut: "Ctrl + T",
         run: (url) => {
             if (url !== undefined) {
                 browser.tabs.create({url: url});
@@ -37,6 +38,7 @@ commands = [
     {
         name: "reload this tab",
         desc: "",
+        shortcut: "F5, Ctrl+R",
         run: () => {browser.tabs.reload()},
         args: () => []
     },
@@ -69,12 +71,14 @@ commands = [
     {
         name: "mute this tab",
         desc: "",
+        shortcut: "Ctrl+M",
         run: () => {browser.tabs.update({muted: true})},
         args: () => []
     },
     {
         name: "unmute this tab",
         desc: "",
+        shortcut: "Ctrl+M",
         run: () => {browser.tabs.update({muted: false})},
         args: () => []
     },
@@ -93,6 +97,7 @@ commands = [
     {
         name: "close this tab",
         desc: "",
+        shortcut: "Ctrl+W, Ctrl+F4",
         run: async () => {
             const tabs = await browser.tabs.query({active: true, currentWindow: true});
             tabs.map(tab => {
@@ -104,18 +109,21 @@ commands = [
     {
         name: "open new window",
         desc: "",
+        shortcut: "Ctrl+N",
         run: () => {browser.windows.create({})},
         args: () => []
     },
     {
         name: "open new private window",
         desc: "",
+        shortcut: "Ctrl+Shift+P",
         run: () => {browser.windows.create({incognito: true})},
         args: () => []
     },
     {
         name: "close this window",
         desc: "",
+        shortcut: "Ctrl+Shift+W, Alt+F4",
         run: async () => {
             const current_window = await browser.windows.getCurrent();
             browser.windows.remove(current_window.id);
