@@ -32,11 +32,13 @@ async function onChange(input) {
         suggestions = [{
             name: command.name,
             desc: command.desc
+            // shortcuts for commands with args not supported for now
         }];
         const allowed_args = await command.args()
         suggestions = allowed_args.map((s) => Object({
             name: command.name + " " + s.content,
             desc: s.description
+            // shortcuts for commands with args not supported for now
         }));
 
         input = args;
@@ -46,7 +48,8 @@ async function onChange(input) {
 
     suggestions = suggestions.map(cmd => Object({
         name: cmd.name.toLowerCase(),
-        desc: cmd.desc.toLowerCase()
+        desc: cmd.desc.toLowerCase(),
+        shortcut: cmd.shortcut && cmd.shortcut.toLowerCase()
     }));
 
     // whatever set of suggestions we've ended up with, narrow
@@ -60,7 +63,8 @@ async function onChange(input) {
         .sort((a, b) => b.score - a.score)
         .map(cmd => Object({
             content: cmd.name,
-            description: cmd.desc
+            description: cmd.desc,
+            shortcut: cmd.shortcut
         }));
 
     return filtered_suggestions;

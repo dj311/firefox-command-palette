@@ -85,10 +85,15 @@ class CommandBar {
         desc_el.className = "text-shortcut";
         desc_el.appendChild(document.createTextNode(item.description));
 
+        var shortcut_el = document.createElement("div");
+        desc_el.className = "text-shortcut";
+        desc_el.appendChild(document.createTextNode(item.shortcut || ""));
+
         var list_item_el = document.createElement("div");
         list_item_el.className = "panel-list-item";
         list_item_el.appendChild(text_el);
         list_item_el.appendChild(desc_el);
+        list_item_el.appendChild(shortcut_el);
         list_item_el.onclick = async ev => {
             this.selectItem(index);
             this.input_el.focus();
