@@ -1,7 +1,9 @@
 # Firefox Command Palette
-Control Firefox with Sublime/helm-M-x style fuzzy complete. Use it from the omnibar with the `;` search prefix, or trigger a pop-up with `Ctrl+Space`. 
 
-[Available](https://addons.mozilla.org/en-GB/firefox/addon/command-palette-for-firefox/) on the Mozilla Add-ons site.
+> [!IMPORTANT]
+> I have stopped maintaining this add-on (as you can probably tell from the commit history). Please do feel free to fork the repo or build off of the source code :slightly_smiling_face:
+
+Control Firefox with Sublime/helm-M-x style fuzzy complete. Use it from the omnibar with the `;` search prefix, or trigger a pop-up with `Ctrl+Space`. 
 
 To build:
 
